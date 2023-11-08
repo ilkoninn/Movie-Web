@@ -1,0 +1,44 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("/images/foryou-background.jpg");
+  background-color: #070a0f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.text-navbar {
+  color: #e2f9eb;
+  font-size: 23px;
+}
+
+#green {
+  color: #abedc7;
+}
+
+#home-message {
+  color: aliceblue;
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.home-page {
+  margin-top: 30vh;
+  margin-left: -20vh;
+}
+
+.button-page {
+  margin-top: -12vh;
+  margin-left: 14.9vh;
+  font-size: 50px;
+}
+
+.icon-text {
+  font-weight: 600;
+  font-size: 30px;
+  color: aliceblue;
+}
+
+#icon-name {
+  color: #3fd57d;
+}

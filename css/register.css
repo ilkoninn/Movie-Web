@@ -14,11 +14,14 @@ body {
   z-index: -1;
 }
 
+.icon-text {
+  font-weight: 600;
+  font-size: 30px;
+  color: aliceblue;
+}
 
-
-
-
-
-
+#icon-name {
+  color: #3fd57d;
+}
 
 
