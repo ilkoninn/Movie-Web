@@ -3,6 +3,7 @@ body {
   background-image: url("/images/home-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  box-sizing: border-box;
 }
 
 .text-navbar {
@@ -16,19 +17,19 @@ body {
 
 #home-message {
   color: aliceblue;
-  font-weight: 600; 
+  font-weight: 600;
   font-size: 60px;
 }
 
-.home-page{
-    margin-top: 30vh;
-    margin-left: -20vh;
+.home-page {
+  margin-top: 30vh;
+  margin-left: -20vh;
 }
 
-.button-page{
-    margin-top: -12vh;
-    margin-left: 15vh;
-    font-size: 50px;
+.button-page {
+  margin-top: -12vh;
+  margin-left: 14.9vh;
+  font-size: 50px;
 }
 
 .icon-text {
