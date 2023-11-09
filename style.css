@@ -4,6 +4,10 @@
     /* Adjust as needed */
 }
 
+.highlight {
+    color: #3fd57d;
+}
+
 body {
     background-color: #020805;
 }
@@ -13,8 +17,47 @@ body {
     color: #fff;
     font-family: Poppins;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     /* Adjust as needed */
+}
+
+.background {
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image {
+    position: relative;
+    z-index: 1;
+}
+
+.info {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    /* Move the box to the left */
+    width: calc(100% + 20px);
+    /* Increase the width */
+    height: 100%;
+    background: linear-gradient(0deg, #3fd57d 30%, rgba(0, 0, 0, 0) 100%);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    margin-left: 20px;
+}
+
+.splide__slide:hover .background .info {
+    transform: translateY(0);
+    /* Show the film information */
 }
 
 .custom-button {
@@ -23,16 +66,15 @@ body {
 }
 
 .splide__slide {
-    width: 350px;
-    height: 550px;
-    padding: 10px;
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: visible;
 }
 
 .splide__slide img {
-    width: 90.9%;
-    height: 90.9%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
