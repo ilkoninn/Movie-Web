@@ -21,93 +21,110 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   </head>
   <body>
     <header>
-      <nav class="nav fixed-top">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <div class="d-flex justify-content-between">
-            <a class="nav-link ms-5 me-3 icon-text" href="home.html"
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a
+              class="navbar-brand nav-link ms-3 me-3 icon-text"
+              href="home.html"
               >Lime<span id="icon-name">Flix</span></a
             >
-            <ul class="nav justify-content-center">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link text-navbar mt-1 ms-3 me-3" href="home.html"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-navbar mt-1 ms-3 me-3" href="#"
+                <a class="nav-link text-navbar mt-1 ms-3 me-3" href="home.html"
                   >Movies</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-navbar mt-1 ms-3 me-3" href="#"
+                <a class="nav-link text-navbar mt-1 ms-3 me-3" href="home.html"
                   >TV Shows</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-navbar mt-1 ms-3 me-3" href="#"
+                <a class="nav-link text-navbar mt-1 ms-3 me-3" href="home.html"
                   >Coming soon</a
                 >
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link mt-1 ms-3 me-5 text-navbar"
+                  class="nav-link text-navbar mt-1 ms-3 me-3"
                   href="foryou.html"
                   >For you</a
                 >
               </li>
             </ul>
-            <div class="d-flex justify-content-end">
-              <a class="nav-link text-navbar mt-1" href="login.html">Login</a>
-              <a class="nav-link text-navbar mt-1" href="register.html"
-                >Sign Up</a
-              >
-            </div>
+            <a
+              type="button"
+              class="btn btn-outline-success me-3"
+              href="login.html"
+              style="font-weight: 600; font-size: 20px"
+              >Login</a
+            >
+            <a
+              class="btn btn-success"
+              type="button"
+              href="register.html"
+              style="font-weight: 600; font-size: 19px"
+              >Sign Up</a
+            >
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <div class="container text-center">
-        <div class="position-absolute top-50 start-50 translate-middle"  >
-          <div
-            class="row p-5"
-            style="
-              color: aliceblue;
-              background-color: #040e11;
-              border-radius: 10px;
-            "
+      <div class="foryou-page">
+        <h2 class="foryou-h2">
+          Welcome to your section
+        </h2>
+        <p id="foryou-message">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+          maxime, iste mollitia explicabo eos voluptatibus. Cupiditate
+          doloremque libero voluptatibus Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Tempora, sequi. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Mollitia, ab.
+        </p>
+        <button
+          type="button"
+          class="btn btn-outline-success button-page btn-lg"
+        >
+          <a
+            href="register.html"
+            style="text-decoration: none; color: aliceblue"
+            >Learn More</a
           >
-            <h1 style="margin-left: -23vh; margin-bottom: 5vh;">
-              About <span id="icon-name">Section</span>
-            </h1>
-            <div class="col-4">
-              <h3 style="margin-top: 7vh;">What is the purpose of this website?</h3>
-            </div>
-            <div class="col-8">
-              <p>
-                Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit.
-                Quisquam Voluptatem Facere Amet Temporibus Culpa Sit Illo Earum
-                Cupiditate Soluta Perferendis! Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Quo, repudiandae. Adipisci laborum
-                tempora commodi perspiciatis magnam tempore consectetur soluta
-                perferendis dolor. Modi harum, praesentium natus totam quidem
-                velit sint ullam rerum eum corrupti. Eos assumenda
-                necessitatibus ad quos similique nisi corporis deserunt, iure
-                tempore, ex dignissimos soluta maxime ut consectetur. Obcaecati
-                velit consequatur ad illo eius necessitatibus quibusdam ducimus
-                repellat reprehenderit possimus hic debitis quas, reiciendis
-                repellendus molestias, nostrum dolorum, quae ullam rem. 
-              </p>
-              <a href="#" class="btn btn-outline-dark" style="font-size: 20px;">learn more</a>
-            </div>
-          </div>
-        </div>
+        </button>
+      </div>
+      <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
       </div>
     </main>
     <footer>
+      <script>
+        $(window).on("load", function () {
+          $(".loader-wrapper").fadeOut("slow");
+        });
+      </script>
       <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

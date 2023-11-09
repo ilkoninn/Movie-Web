@@ -21,6 +21,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -65,17 +66,27 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-navbar mt-1 ms-3 me-3" href="home.html"
+                <a
+                  class="nav-link text-navbar mt-1 ms-3 me-3"
+                  href="foryou.html"
                   >For you</a
                 >
               </li>
             </ul>
-              <a type="button" class="btn btn-outline-success me-3" href="login.html" style="font-weight: 600; font-size: 20px;"
-                >Login</a
-              >
-              <a class="btn btn-success" type="button" href="register.html" style="font-weight: 600; font-size: 19px;"
-                >Sign Up</a
-              >
+            <a
+              type="button"
+              class="btn btn-outline-success me-3"
+              href="login.html"
+              style="font-weight: 600; font-size: 20px"
+              >Login</a
+            >
+            <a
+              class="btn btn-success"
+              type="button"
+              href="register.html"
+              style="font-weight: 600; font-size: 19px"
+              >Sign Up</a
+            >
           </div>
         </div>
       </nav>
@@ -86,7 +97,10 @@
           Take <span id="green">your</span> watching experience to the
           <span id="green">Next Level</span>
         </p>
-        <button type="button" class="btn btn-outline-success button-page btn-lg">
+        <button
+          type="button"
+          class="btn btn-outline-success button-page btn-lg"
+        >
           <a
             href="register.html"
             style="text-decoration: none; color: aliceblue"
@@ -94,8 +108,17 @@
           >
         </button>
       </div>
+      <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
     </main>
     <footer>
+      <script>
+        $(window).on("load", function () {
+          $(".loader-wrapper").fadeOut("slow");
+        });
+      </script>
+      
       <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
