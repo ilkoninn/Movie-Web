@@ -6,12 +6,58 @@ body {
 
 .background {
   position: absolute;
-  height: 100%;
+  height: 92%;
   width: 100%;
   background-image: url("/images/home-background.jpg");
   background-size: cover;
   filter: blur(5px);
   z-index: -1;
+}
+
+@media only screen and (max-width: 996px) {
+  .background {
+    position: absolute;
+    height: 85%;
+    width: 100%;
+    background-image: url("/images/home-background.jpg");
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .background {
+    position: absolute;
+    height: 85%;
+    width: 100%;
+    background-image: url("/images/home-background.jpg");
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  }
+}
+
+
+.text-navbar {
+  color: #e2f9eb;
+  font-size: 23px;
+}
+
+.text-navbar:hover {
+  color: #3fd57d;
+}
+
+.navbar-nav li.nav-item:hover {
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: #3fd57d;
+}
+
+.navbar-nav li.nav-item:hover a.nav-link {
+  color: #3fd57d;
 }
 
 .icon-text {

@@ -1,6 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-image: url("/images/home-background.jpg");
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
@@ -9,6 +10,22 @@ body {
 .text-navbar {
   color: #e2f9eb;
   font-size: 23px;
+}
+
+.text-navbar:hover {
+  color: #3fd57d;
+}
+
+.navbar-nav li.nav-item:hover {
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: #3fd57d;
+}
+
+.navbar-nav li.nav-item:hover a.nav-link {
+  color: #3fd57d;
 }
 
 #green {
@@ -22,14 +39,36 @@ body {
 }
 
 .home-page {
-  margin-top: 30vh;
-  margin-left: -20vh;
+  margin: 100px 0px 0px 100px;
+  height: 40vh;
+  width: 80vh;
 }
 
 .button-page {
-  margin-top: -12vh;
-  margin-left: 14.9vh;
   font-size: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .home-page {
+  margin: 40px 0px 0px 40px;
+  height: 20vh;
+  width: 30vh;
+}
+
+.button-page {
+  font-size: 25px;
+}
+}
+@media only screen and (max-width: 810px) {
+  .home-page {
+  margin: 40px 0px 0px 30px;
+  height: 20vh;
+  width: 30vh;
+}
+
+.button-page {
+  font-size: 25px;
+}
 }
 
 .icon-text {
@@ -41,3 +80,4 @@ body {
 #icon-name {
   color: #3fd57d;
 }
+
