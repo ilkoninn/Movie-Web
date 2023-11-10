@@ -116,24 +116,29 @@ body {
 
 .card {
     background-color: #0a100d;
-
     border-color: #0a100d;
-
+    display: flex;
+    flex-direction: column;
+    height: 300px;
 }
 
 .card .card-title {
     color: #e1f9ea;
-
 }
 
 .card .card-text {
     color: #e1f9ea;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    flex-grow: 1;
 }
 
 .card .btn {
     background-color: #abedc6;
-
     border-color: #abedc6;
     color: #000000;
+    align-self: flex-end;
 }
