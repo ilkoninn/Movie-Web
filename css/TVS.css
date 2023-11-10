@@ -40,12 +40,10 @@ body {
     position: absolute;
     top: 0;
     left: -20px;
-    /* Move the box to the left */
     width: calc(100% + 20px);
-    /* Increase the width */
     height: 100%;
     background: linear-gradient(0deg, #3fd57d 30%, rgba(0, 0, 0, 0) 100%);
-    color: #fff;
+    color: #000000;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -53,6 +51,24 @@ body {
     transform: translateY(100%);
     transition: transform 0.3s ease;
     margin-left: 20px;
+    animation: glow 2s infinite;
+}
+
+.info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #00ff6a 30%, rgba(0, 0, 0, 0) 100%);
+    filter: blur(10px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.col-sm-2-4 {
+    width: calc(100% / 12 * 2.4);
 }
 
 .splide__slide:hover .background .info {
@@ -101,4 +117,29 @@ body {
     /* Change the background color when hovered */
     border-color: #3fd57d !important;
     /* Change the border color when hovered */
+}
+
+.card {
+    background-color: #0a100d;
+    /* Change the background color */
+    border-color: #0a100d;
+    /* Change the border color */
+}
+
+.card .card-title {
+    color: #e1f9ea;
+    /* Change the title color */
+}
+
+.card .card-text {
+    color: #e1f9ea;
+    /* Change the text color */
+}
+
+.card .btn {
+    background-color: #abedc6;
+    /* Change the button color */
+    border-color: #abedc6;
+    /* Change the button border color */
+    color: #000000;
 }

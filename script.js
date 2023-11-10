@@ -1,60 +1,69 @@
-let shows = []
+let shows = JSON.parse(localStorage.getItem('shows'));
 
-axios.get('https://api.tvmaze.com/shows')
-    .then(res => {
-        let temp = 0;
-        let tempShow = {}
+if (!shows) {
+    shows = []; // Initialize shows as an empty array
+    axios.get('https://api.tvmaze.com/shows')
+        .then(res => {
+            let temp = 0;
+            let tempShow = {}
 
-        for (let i = 0; i < 25; i++) {
-
-            for (let j = 0; j < res.data.length; j++) {
-
-                if (res.data[j].rating.average > temp) {
-                    if (shows.includes(res.data[j])) {
-                        continue
-                    } else {
+            for (let i = 0; i < 25; i++) {
+                for (let j = 0; j < res.data.length; j++) {
+                    if (res.data[j].rating.average > temp && !shows.find(show => show.id === res.data[j].id)) {
                         temp = res.data[j].rating.average
                         tempShow = res.data[j]
                     }
                 }
-
+                shows.push(tempShow)
+                temp = 0
             }
-            shows.push(tempShow)
-            temp = 0
-        }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('.splide', {
-                type: 'loop',
-                perPage: 5,
-                autoplay: true,
-                interval: 5000,
-                pagination: false, // Add this line
-            }).mount();
+            localStorage.setItem('shows', JSON.stringify(shows));
+            createSlider(shows);
         });
+} else {
+    createSlider(shows);
+}
 
-        let ul = document.querySelector('.splide__list')
-        for (let i = 0; i < shows.length; i++) {
-            let li = document.createElement('li')
-            let divBackground = document.createElement('div')
-            let divImage = document.createElement('div')
-            let img = document.createElement('img')
-            let divInfo = document.createElement('div')
+function createSlider(shows) {
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('.splide', {
+            type: 'loop',
+            perPage: 5,
+            autoplay: true,
+            interval: 5000,
+            pagination: false,
+        }).mount();
+    });
 
-            img.src = shows[i].image.medium
-            divInfo.textContent = `${shows[i].name} - Rating: ${shows[i].rating.average}`
+    let ul = document.querySelector('.splide__list')
+    for (let i = 0; i < shows.length; i++) {
+        let li = document.createElement('li')
+        let divBackground = document.createElement('div')
+        let divImage = document.createElement('div')
+        let a = document.createElement('a')
+        let img = document.createElement('img')
+        let divInfo = document.createElement('div')
 
-            divImage.appendChild(img)
-            divBackground.appendChild(divImage)
-            divBackground.appendChild(divInfo)
+        img.src = shows[i].image.medium
+        img.alt = `Get More Information About: ${shows[i].name}`
+        img.title = `Get More Information About: ${shows[i].name}`
+        a.href = shows[i].url
+        divInfo.textContent = `${shows[i].name}`
 
-            li.setAttribute('class', 'splide__slide')
-            divBackground.setAttribute('class', 'background')
-            divImage.setAttribute('class', 'image')
-            divInfo.setAttribute('class', 'info')
+        a.appendChild(img)
+        divImage.appendChild(a)
+        divBackground.appendChild(divImage)
+        divBackground.appendChild(divInfo)
 
-            li.appendChild(divBackground)
+        li.setAttribute('class', 'splide__slide')
+        divBackground.setAttribute('class', 'background')
+        divImage.setAttribute('class', 'image')
+        divInfo.setAttribute('class', 'info')
 
-            ul.appendChild(li)
-        }
-    })
+        li.appendChild(divBackground)
+
+        ul.appendChild(li)
+    }
+}
+
