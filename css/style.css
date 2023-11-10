@@ -1,0 +1,111 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("/images/home-background.jpg");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.text-navbar {
+  color: #e2f9eb;
+  font-size: 23px;
+}
+
+.text-navbar:hover {
+  color: #3fd57d;
+}
+
+.navbar-nav li.nav-item:hover {
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: #cdf47f;
+}
+
+.navbar-nav li.nav-item:hover a.nav-link {
+  color: #3fd57d;
+}
+
+#green {
+  color: #abedc7;
+}
+
+#home-message {
+  color: aliceblue;
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.home-page {
+  margin: 100px 0px 0px 100px;
+  height: 40vh;
+  width: 80vh;
+}
+
+.button-page {
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .home-page {
+    margin: 40px 0px 0px 40px;
+    height: 20vh;
+    width: 30vh;
+  }
+
+  .button-page {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .home-page {
+    margin: 40px 0px 0px 30px;
+    height: 20vh;
+    width: 30vh;
+  }
+
+  .button-page {
+    font-size: 25px;
+  }
+}
+
+.icon-text {
+  font-weight: 600;
+  font-size: 30px;
+  color: aliceblue;
+}
+
+#icon-name {
+  color: #3fd57d;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: 4px solid #3fd57d;
+  animation: loader 2s infinite ease;
+}
+
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
