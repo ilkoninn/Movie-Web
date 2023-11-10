@@ -1,37 +1,5 @@
 let shows = JSON.parse(localStorage.getItem('shows'));
 
-if (!shows) {
-    shows = [];
-    axios.get('https://api.tvmaze.com/shows')
-        .then(res => {
-            let temp = 0;
-            let tempShow = {}
-
-            for (let i = 0; i < 250; i++) {
-                for (let j = 0; j < res.data.length; j++) {
-                    if (res.data[j].rating.average > temp && !shows.find(show => show.id === res.data[j].id)) {
-                        temp = res.data[j].rating.average
-                        tempShow = res.data[j]
-                    }
-                }
-                shows.push(tempShow)
-                temp = 0
-            }
-
-            localStorage.setItem('shows', JSON.stringify(shows));
-            createPopularSlider(shows, 0);
-            createGenreSlider(shows, 'Thriller', 1);
-            createGenreSlider(shows, 'Action', 2);
-            createGenreSlider(shows, 'Horror', 3);
-
-        });
-} else {
-    createPopularSlider(shows, 0);
-    createGenreSlider(shows, 'Thriller', 1);
-    createGenreSlider(shows, 'Action', 2);
-    createGenreSlider(shows, 'Horror', 3);
-}
-
 function createPopularSlider(shows, targetList) {
     document.addEventListener('DOMContentLoaded', function () {
         new Splide("#first-slider", {
