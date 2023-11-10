@@ -1,7 +1,7 @@
 .wide-container {
     max-width: 90%;
     margin-top: 50px;
-    /* Adjust as needed */
+
 }
 
 .highlight {
@@ -18,7 +18,7 @@ body {
     font-family: Poppins;
     font-weight: 300;
     margin-bottom: 0px;
-    /* Adjust as needed */
+
 }
 
 .background {
@@ -73,7 +73,7 @@ body {
 
 .splide__slide:hover .background .info {
     transform: translateY(0);
-    /* Show the film information */
+
 }
 
 .custom-button {
@@ -102,44 +102,38 @@ body {
 .splide__arrow {
     opacity: 0.5;
     background-color: #020805 !important;
-    /* Make the buttons transparent */
+
     border: solid !important;
-    /* Remove the border */
     color: #ffffff !important;
-    /* Change the color of the text */
     font-size: 20px !important;
-    /* Adjust the size of the text */
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .splide__arrow:hover {
     background-color: #3fd57d !important;
-    /* Change the background color when hovered */
     border-color: #3fd57d !important;
-    /* Change the border color when hovered */
 }
 
 .card {
     background-color: #0a100d;
-    /* Change the background color */
+
     border-color: #0a100d;
-    /* Change the border color */
+
 }
 
 .card .card-title {
     color: #e1f9ea;
-    /* Change the title color */
+
 }
 
 .card .card-text {
     color: #e1f9ea;
-    /* Change the text color */
+
 }
 
 .card .btn {
     background-color: #abedc6;
-    /* Change the button color */
+
     border-color: #abedc6;
-    /* Change the button border color */
     color: #000000;
 }
