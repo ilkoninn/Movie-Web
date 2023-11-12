@@ -20,7 +20,6 @@ function createPopularSlider(shows, targetList) {
         createCard(sortedShows[i], ul);
     }
 
-    // Define the callback function
     let initializeSplide = function () {
         new Splide("#first-slider", {
             type: 'loop',
@@ -56,7 +55,6 @@ function createGenreSlider(shows, genre, targetList) {
         createCard(filteredShows[i], ul);
     }
 
-    // Define the callback function
     let initializeSplide = function () {
         let sliderId;
         if (targetList === 1) {
@@ -76,12 +74,9 @@ function createGenreSlider(shows, genre, targetList) {
         }).mount();
     };
 
-    // Check if the document is already loaded
     if (document.readyState === 'loading') {
-        // If the document is still loading, set up the event listener
         document.addEventListener('DOMContentLoaded', initializeSplide);
     } else {
-        // If the document is already loaded, call the callback function directly
         initializeSplide();
     }
 }
@@ -108,7 +103,7 @@ function createCard(show, ul) {
     console.log(img.src);
     img.alt = `Get More Information About: ${show.name}`
     img.title = `Get More Information About: ${show.name}`
-    a.href = show.url
+    a.href = `./movie.html?id=${show.id}`
     divInfo.textContent = `${show.name}`
 
     a.appendChild(img)

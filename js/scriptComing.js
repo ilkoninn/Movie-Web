@@ -22,7 +22,7 @@ let intervalId = setInterval(() => {
                 <div class="card-body">
                     <h5 class="card-title">${showsEndingIn2023[i].name}</h5>
                     <p class="card-text">${showsEndingIn2023[i].summary.substring(0, 100)}...</p>
-                    <a href="${showsEndingIn2023[i].url}" class="btn btn-primary">More Info</a>
+                    <a href="movie.html?id=${showsEndingIn2023[i].id}" class="btn btn-primary">More Info</a>
                 </div>
             `;
 
