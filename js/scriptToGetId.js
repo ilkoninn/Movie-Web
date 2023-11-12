@@ -69,7 +69,7 @@ axios.get(`https://api.tvmaze.com/shows/${id}`).then((res) => {
               <h2 id="white">Show Info</h2>
 
               <div id="white">
-                <strong>Movie name:</strong>
+                <strong>Show name:</strong>
                 <img
                   class="flag-align"
                   src="https://static.tvmaze.com/intvendor/flags/us.png"
